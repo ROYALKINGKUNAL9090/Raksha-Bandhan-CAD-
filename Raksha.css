@@ -1,0 +1,63 @@
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #fdf2e9;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+.rakhi-container {
+  position: relative;
+  text-align: center;
+}
+
+.rakhi-center {
+  width: 100px;
+  height: 100px;
+  background: radial-gradient(circle, #ffcc00, #ff8800);
+  border-radius: 50%;
+  border: 5px solid #d35400;
+  position: relative;
+  z-index: 2;
+  animation: pulse 2s infinite;
+  box-shadow: 0 0 20px rgba(211, 84, 0, 0.5);
+}
+
+.inner-circle {
+  width: 40px;
+  height: 40px;
+  background: white;
+  border-radius: 50%;
+  position: absolute;
+  top: 30px;
+  left: 30px;
+  border: 2px dashed #e67e22;
+}
+
+.thread {
+  width: 300px;
+  height: 6px;
+  background: linear-gradient(to right, transparent, #c0392b, transparent);
+  position: absolute;
+  top: 50px;
+  left: -100px;
+  z-index: 1;
+}
+
+h1 {
+  margin-top: 40px;
+  color: #c0392b;
+  animation: fadeIn 3s ease-in;
+}
+
+@keyframes pulse {
+  0% { transform: scale(1); box-shadow: 0 0 0px #ff8800; }
+  50% { transform: scale(1.1); box-shadow: 0 0 30px #ffcc00; }
+  100% { transform: scale(1); box-shadow: 0 0 0px #ff8800; }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
